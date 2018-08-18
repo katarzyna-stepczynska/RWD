@@ -44,15 +44,20 @@ html {
 #tribute-info {
     width: 100%;
 }
-article {
+article, section {
     margin: 80px;
+    border-top: 1px solid black;
 }
-article h2 {
+h2 {
     font-family: 'Amatic SC', sans-serif;
+    margin-top: 60px;
 }
 article p {
     font-family: 'Open Sans Condensed', sans-serif;
     line-height: 2rem;
+}
+.timeline {
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 footer {
     border-top: 1px solid black;
