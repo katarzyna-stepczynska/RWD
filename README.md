@@ -12,6 +12,6 @@ Started after 16.08.2018.
 
 W tym repozytorium znajdują się projekty pochodzace ze strony [freecodecamp](https://www.freecodecamp.org/).
 
-Mój profil na gitHubie z innymi repozytoriami [here](https://github.com/katarzyna-stepczynska).
+Mój profil na gitHubie z innymi repozytoriami znajduje się [tutaj](https://github.com/katarzyna-stepczynska).
 
-Started after 16.08.2018.
+Praca nad projektami - od 16.08.2018.
