@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
+    <title>A Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <h1 id="title">Welcome to the form</h1>
+    <p id="description">Let's tell me about your place where you live</p>
+</div>
+<div>
+    <form id="survey-form">
+        <fieldset>
+            <legend>Personal information:</legend>
+            <label id="name-label" for="name">Your name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name..." required>
+            <label id="email-label" for="email">Your e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email adress..." required>
+            <label id="number-label" for="number">Your age:</label>
+            <input type="number" id="number" name="age" min="18" max="99" placeholder="Age">
+        </fieldset>
+        <fieldset>
+            <legend>Information about your city:</legend>
+            <label>What is the population of city in which you live?</label>
+            <div>
+
+            </div>
+        </fieldset>
+
+    </form>
+</div>
+<aside>
+
+</aside>
+</body>
+</html>
