@@ -11,58 +11,65 @@
     <h1 id="title">Welcome to the form</h1>
     <p id="description">Let's tell me about your place where you live</p>
 </div>
-<div>
-    <form id="survey-form">
-        <fieldset>
-            <legend>Personal information:</legend>
-            <label id="name-label" for="name">Your name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name..." required>
-            <label id="email-label" for="email">Your e-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email adress..." required>
-            <label id="number-label" for="number">Your age:</label>
-            <input type="number" id="number" name="age" min="18" max="99" placeholder="Age">
-        </fieldset>
-        <fieldset>
-            <legend>Information about your city:</legend>
-            <label for="city">What is the population of city in which you live?</label>
-            <div>
-                <select id="dropdown" name="city" class="dropdown">
-                    <option></option>
-                    <option disabled value>Select an option...</option>
-                    <option value="village">village</option>
-                    <option value="city 10000 population">city to 10,000 population</option>
-                    <option value="city 10000-50000 population">city of 10,000 to 50,000 population</option>
-                    <option value="city 50000-100000 population">city of 50,000 to 100,000 population</option>
-                    <option value="city 100000-500000 population">city of 100,000 to 500,000 population</option>
-                    <option value="city 500000 population">city over 500,000 population</option>
-                </select>
-            </div>
-            <div>
-                <label>Rate on a scale of 1 to 5, where 5 is a highest rating and 1 is the lowest, how much do you like your place where you live?</label>
-                <input type="radio" value="5" checked> 5 - I definitely like
-                <input type="radio" value="4"> 4 - I like
-                <input type="radio" value="3"> 3 - It's ok
-                <input type="radio" value="2"> 2 - It could be better
-                <input type="radio" value="1"> 1 - Here is terrible
-            </div>
-            <div>
-                <label>What events are organized in the place where you live? (Check all that apply):</label>
-                <input type="checkbox" name="event1" value="festivals"> Festivals
-                <input type="checkbox" name="event2" value="concerts"> Concerts
-                <input type="checkbox" name="event3" value="fairs"> Fairs (slow-food, flowers, ect.)
-                <input type="checkbox" name="event4" value="sport-events"> Sport events
-                <input type="checkbox" name="event5" value="flea-markets"> Flea markets
-                <input type="checkbox" name="event6" value="marches"> Marches in memory of something
-                <input type="checkbox" name="event7" value="others"> Others...
-            </div>
-            <label for="comments">Others events:</label>
-                <textarea id="comments" class="input-field" name="comment" placeholder="Enter others events here..."></textarea>
-        </fieldset>
-        <button id="submit" type="submit">Submit</button>
-    </form>
-</div>
-<aside>
-
-</aside>
+<form id="survey-form">
+    <fieldset>
+        <legend>Personal information:</legend>
+        <label id="name-label" for="name">Your name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name..." required>
+        <label id="email-label" for="email">Your e-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email adress..." required>
+        <label id="number-label" for="number">Your age:</label>
+        <input type="number" id="number" name="age" min="18" max="99" placeholder="Age">
+    </fieldset>
+    <fieldset>
+        <legend>Information about your city:</legend>
+        <label for="city">What is the population of city in which you live?</label>
+        <div>
+            <select id="dropdown" name="city" class="dropdown">
+                <option></option>
+                <option disabled value>Select an option...</option>
+                <option value="village">village</option>
+                <option value="city 10000 population">city to 10,000 population</option>
+                <option value="city 10000-50000 population">city of 10,000 to 50,000 population</option>
+                <option value="city 50000-100000 population">city of 50,000 to 100,000 population</option>
+                <option value="city 100000-500000 population">city of 100,000 to 500,000 population</option>
+                <option value="city 500000 population">city over 500,000 population</option>
+            </select>
+        </div>
+        <div>
+            <label>Rate on a scale of 1 to 5, where 5 is a highest rating and 1 is the lowest, how much do you like your
+                place where you live?</label>
+            <input type="radio" value="5" checked> 5 - I definitely like
+            <input type="radio" value="4"> 4 - I like
+            <input type="radio" value="3"> 3 - It's ok
+            <input type="radio" value="2"> 2 - It could be better
+            <input type="radio" value="1"> 1 - Here is terrible
+        </div>
+        <div>
+            <label>What events are organized in the place where you live? (Check all that apply):</label>
+            <input type="checkbox" name="event1" value="festivals"> Festivals
+            <input type="checkbox" name="event2" value="concerts"> Concerts
+            <input type="checkbox" name="event3" value="fairs"> Fairs (slow-food, flowers, ect.)
+            <input type="checkbox" name="event4" value="sport-events"> Sport events
+            <input type="checkbox" name="event5" value="flea-markets"> Flea markets
+            <input type="checkbox" name="event6" value="marches"> Marches in memory of something
+            <input type="checkbox" name="event7" value="others"> Others...
+        </div>
+        <label for="comments">Others events:</label>
+        <textarea id="comments" class="input-field" name="comment" placeholder="Enter others events here..."></textarea>
+    </fieldset>
+    <button id="submit" type="submit">Submit</button>
+</form>
+<footer>
+    <div class="contact">
+        <a href="https://github.com/katarzyna-stepczynska" target="_blank">
+            <span class="icon"><i class="fa fa-github"></i></span></a>
+        <a href="https://codepen.io/katarzyna-stepczynska/" target="_blank">
+            <span class="icon"><i class="fa fa-codepen"></i></span></a>
+        <a href="https://www.freecodecamp.org/kate_step" target="_blank">
+            <span class="icon"><i class="fa fa-free-code-camp"></i></span></a>
+    </div>
+    <p>Designed and built by Katarzyna Stepczynska - 2018 for FreeCodeCamp / Survey Form</p>
+</footer>
 </body>
 </html>
