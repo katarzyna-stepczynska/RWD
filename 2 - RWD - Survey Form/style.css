@@ -1,5 +1,16 @@
 body {
-    background: darkgray;
+    background: #da5a51;
     margin: 0;
     padding: 0;
+    font-family: Calibri, sans-serif;
+    color: #fff;
+}
+.form-outer {
+    background: #10243d;
+}
+.form-title {
+    text-align: center;
+}
+#description{
+    color: #566278;
 }
