@@ -5,12 +5,35 @@ body {
     font-family: Calibri, sans-serif;
     color: #fff;
 }
+.form-title{
+    text-align: center;
+}
 .form-outer {
     background: #10243d;
-}
-.form-title {
-    text-align: center;
+    margin: 0, 50px;
 }
 #description{
     color: #566278;
+}
+#survey-form {
+    border: 1px solid #fff;
+    margin: auto;
+    width: 60%;
+}
+fieldset {
+    border: none;
+}
+legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+label {
+    color: #566278;
+    width: 100%;
+}
+input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #566278;
 }
