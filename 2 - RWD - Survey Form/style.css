@@ -84,7 +84,7 @@ option:focus {
     border: 1px solid #566278;
     outline: none;
 }
-.checkbox-style {
+.checkbox-style, .radio-style {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -95,12 +95,12 @@ option:focus {
     -ms-user-select: none;
     user-select: none;
 }
-.checkbox-style input {
+.checkbox-style input, .radio-style input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
-.checkmark {
+.checkmark-checkbox {
     position: absolute;
     top: 0;
     left: 0;
@@ -108,21 +108,30 @@ option:focus {
     width: 15px;
     background-color: rgb(86, 98, 120);
 }
-.checkbox-style:hover input ~ .checkmark {
+.checkmark-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(86, 98, 120);
+    border-radius: 50%;
+}
+.checkbox-style:hover input ~ .checkmark-checkbox, .radio-style:hover input ~ .checkmark-radio{
     background-color: rgba(86, 98, 120, 0.5);
 }
-.checkbox-style input:checked ~ .checkmark {
+.checkbox-style input:checked ~ .checkmark-checkbox, .radio-style input:checked ~ .checkmark-radio {
     background-color: rgb(86, 98, 120);
 }
-.checkmark:after {
+.checkmark-checkbox:after, .checkmark-radio:after {
     content: "";
     position: absolute;
     display: none;
 }
-.checkbox-style input:checked ~ .checkmark:after {
+.checkbox-style input:checked ~ .checkmark-checkbox:after, .radio-style input:checked ~ .checkmark-radio:after {
   display: block;
 }
-.checkbox-style .checkmark:after {
+.checkbox-style .checkmark-checkbox:after {
     left: 6px;
     top: 2px;
     width: 2px;
@@ -132,6 +141,14 @@ option:focus {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+.radio-style .checkmark-radio:after {
+ 	top: 4.5px;
+	left: 4.5px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
 }
 #comments {
     outline: #566278;
