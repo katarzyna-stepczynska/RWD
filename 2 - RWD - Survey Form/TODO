@@ -16,6 +16,7 @@
 * **User Story #13:** Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. __DONE__
 * **User Story #14:** Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.__DONE__
 * **User Story #15:** Inside the form element, I am presented with a textarea at the end for additional comments.__DONE__
-* **User Story #16:** Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
+* **User Story #16:** Inside the form element, I am presented with a button with id="submit" to submit all my inputs.__DONE__
 
-##### Using HTML, CSS
+##### Later - at the end: I will make this page responsive to mobile, tablet, and adding validations in JS.
+##### Using HTML, CSS, without framework and any libraries.
