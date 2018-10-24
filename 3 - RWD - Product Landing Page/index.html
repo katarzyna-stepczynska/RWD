@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
     <title>Product Landing Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header id="header">
-        <div class="logo">
+        <div class="header-logo">
             <img id="header-img" src="images/apple-logo.svg" alt="red apple simple logo"/>
-        </div>
-        <div>
-            <h1>Red apple</h1>
+            <span class="header-text"><h1>Love apples</h1></span>
         </div>
         <nav id="nav-bar">
             <ul>
@@ -24,15 +23,19 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
     <section id="home">
-        <h2>Sweet, Nutritious and Delicious</h2>
-        <h5>The key to hapiness is hidden in the <strong>Apple</strong>.</h5>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <label for="email"><p>Want to meet Love Apples?</p></label>
-            <input name="email" id="email" type="email" placeholder="Write your email address" required />
-            <input id="submit" type="submit" value="Pick one of them!" class="btn" />
-        </form>
+        <div class="container">
+            <h2>Sweet, Nutritious and Delicious</h2>
+            <h5>The key to hapiness is hidden in the <strong>Apple</strong>.</h5>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <label for="email"><p>Want to meet Love Apples?</p></label>
+                <input name="email" id="email" type="email" placeholder="Write your email address" required />
+                <input id="submit" type="submit" value="Pick one of them!" class="btn" />
+            </form>
+            <div class="home-img">
+                <img src="images/apples-home.png" alt="red apple simple logo"/>
+            </div>
+        </div>
     </section>
     <section id="features">
         <h2>Different shapes and sizes</h2>
