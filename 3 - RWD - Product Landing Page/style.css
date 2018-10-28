@@ -49,6 +49,7 @@ h2 {
     font-size: 40px;
     margin: 0;
     padding: 120px 0 0 0;
+    font-weight: 100;
 }
 h5 {
     font-family: 'Open Sans', 'Euphemia', sans-serif;
@@ -163,6 +164,19 @@ p {
 #orchard-of-apples {
   width: 100%;
   background-image: radial-gradient(rgba(230,213,169,0.75), rgba(230,213,169,1));
+  height: 100vh;
+  text-align: center;
+}
+#video {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+#orchard-of-apples h2, #orchard-of-apples h5 {
+  color: #8e6f2c;
+}
+#buy {
+  width: 100%;
+  background-color: #ededed;
   height: 100vh;
   text-align: center;
 }
