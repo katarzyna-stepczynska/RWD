@@ -157,7 +157,7 @@ p {
   margin-top:20px;
   height: 350px;
 }
-#nutrition .nutrition-desc .grids-column .grid h2, #nutrition .nutrition-desc .grids-column .grid h5 {
+#nutrition .nutrition-desc .grids-column .grid h2, #nutrition .nutrition-desc .grids-column .grid h5, #buy .grids-row h2, #buy o.grids-rowl h5 {
   padding: 10px 0 0 0;
   margin: 0;
 }
@@ -177,12 +177,12 @@ p {
 #buy {
   width: 100%;
   background-color: #ededed;
-  height: 100vh;
+  height: 130vh;
   text-align: center;
 }
 #lite, #pro, #team {
   margin: 20px;
-  max-width: 400px; 
+  width: 300px; 
   border: 1px solid #554F49;
   color: #554F49;
 }
@@ -198,4 +198,17 @@ p {
     content: "•";
     padding-right: 8px;
     color: #554F49;
+}
+.btn {
+  background: transparent;
+  border: 1px solid #8e6f2c;
+  border-radius: 50px;
+  color: #8e6f2c;
+  font-family: 'Open Sans', 'Euphemia', sans-serif;
+  font-size: 1.2em;
+  padding: 7px 14px;
+  margin: 15px 0 25px 0;
+}
+.buy-img {
+  height: 275px;
 }
