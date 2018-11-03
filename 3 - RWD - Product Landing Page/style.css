@@ -35,9 +35,9 @@ ul {
   justify-content: space-around;
   margin: 0;
   padding: 0;
-}
-li {
   list-style: none;
+}
+#nav-bar ul li {
   margin: 0 20px;
 }
 a {
@@ -179,4 +179,22 @@ p {
   background-color: #ededed;
   height: 100vh;
   text-align: center;
+}
+#lite, #pro, #team {
+  margin: 20px;
+  max-width: 400px; 
+  border: 1px solid #554F49;
+}
+#buy ol {
+  margin: 20px;
+  padding: 0;
+  list-style: none;
+}
+#buy ol li {
+  margin: 10px;
+}
+#buy ol li:before {
+    content: "•";
+    padding-right: 8px;
+    color: #554F49;
 }
