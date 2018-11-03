@@ -97,7 +97,7 @@ h5 {
 #home h2, #home h5, #nutrition h2, #nutrition h5 {
   color: #F1F1F1;
 }
-#features h2, #features h5 {
+#features h2, #features h5, #buy h2, #buy h5 {
   color: #554F49;
 }
 .home-img {
@@ -184,6 +184,7 @@ p {
   margin: 20px;
   max-width: 400px; 
   border: 1px solid #554F49;
+  color: #554F49;
 }
 #buy ol {
   margin: 20px;
