@@ -1,0 +1,235 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+}
+#header-img{
+    height: 50px;
+    margin: 20px 0 0 15px;
+}
+.header-text {
+  font-family: 'Pacifico', 'Calibri', cursive;
+  float: left;
+  color: #F1F1F1;
+}
+.nav-icon {
+  display: none;
+}
+#nav-bar {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#nav-bar ul li {
+  margin: 0 20px;
+  display: inline-block;
+}
+a {
+  color: #F1F1F1;
+  text-decoration: none;
+}
+h2 {
+    font-family: 'Open Sans', 'Euphemia', sans-serif;
+    font-size: 40px;
+    margin: 0;
+    padding: 120px 0 0 0;
+    font-weight: 100;
+}
+h5 {
+    font-family: 'Open Sans', 'Euphemia', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 20px 0;
+    padding: 0;
+}
+#submit {
+  padding: 0 10px;
+  margin: 5px 0 5px 15px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px #f1f1f1 solid;
+  background: transparent;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+#email {
+  height: 40px;
+  width: 65%;
+  padding: 0 10px;
+  margin: 5px 0;
+  font-size: 1em;
+  border: 1px #F1F1F1 solid;
+  background: transparent;
+  color: #F1F1F1;
+}
+#email:focus {
+  outline: none;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+#home {
+  width: 100%;
+  background-image: radial-gradient(rgba(174,149,127,0.5), rgba(174,149,127,1));
+  height: 100vh;
+  text-align: center;
+}
+#home h2, #home h5, #nutrition h2, #nutrition h5 {
+  color: #F1F1F1;
+}
+#features h2, #features h5, #buy h2, #buy h5 {
+  color: #554F49;
+}
+.home-img {
+  height: 350px;
+}
+#features {
+  width: 100%;
+  background-color: #f1f1f1;
+  background-image: url("images/background-feature.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+}
+.grids-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.grids-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.grid {
+  margin: 20px;
+  max-width: 400px; 
+}
+.icon {
+  text-align: center;
+  margin-top: 10px;
+}
+.desc {
+  color: #554F49;
+  margin: 10px;
+}
+p {
+  line-height: 1.25em;
+}
+#nutrition {
+  width: 100%;
+  background-image: radial-gradient(rgba(107,141,91,0.75), rgba(107,141,91,1));
+  height: 100vh;
+  text-align: center;
+}
+.nutrition-desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.nutrition-img {
+  margin-top:20px;
+  height: 350px;
+}
+#nutrition .nutrition-desc .grids-column .grid h2, #nutrition .nutrition-desc .grids-column .grid h5, #buy .grids-row h2, #buy o.grids-rowl h5 {
+  padding: 10px 0 0 0;
+  margin: 0;
+}
+#orchard-of-apples {
+  width: 100%;
+  background-image: radial-gradient(rgba(230,213,169,0.75), rgba(230,213,169,1));
+  height: 100vh;
+  text-align: center;
+}
+#video {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+#orchard-of-apples h2, #orchard-of-apples h5 {
+  color: #8e6f2c;
+}
+#buy {
+  width: 100%;
+  background-color: #ededed;
+  height: 130vh;
+  text-align: center;
+}
+#lite, #pro, #team {
+  margin: 20px;
+  width: 300px; 
+  border: 1px solid #554F49;
+  color: #554F49;
+}
+#buy ol {
+  margin: 20px;
+  padding: 0;
+  list-style: none;
+}
+#buy ol li {
+  margin: 10px;
+}
+#buy ol li:before {
+    content: "•";
+    padding-right: 8px;
+    color: #554F49;
+}
+.btn {
+  background: transparent;
+  border: 1px solid #8e6f2c;
+  border-radius: 50px;
+  color: #8e6f2c;
+  font-family: 'Open Sans', 'Euphemia', sans-serif;
+  font-size: 1.2em;
+  padding: 7px 14px;
+  margin: 15px 0 25px 0;
+}
+.buy-img {
+  height: 275px;
+}
+footer {
+  background: #F1F1F1;
+  text-align: center;
+  padding: 30px 0;
+}
+h4 {
+  font-family: 'Open Sans', 'Euphemia', sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 10px;
+  color: #554F49;
+}
+footer a {
+  color: #8e6f2c;
+  text-decoration: underline;
+}

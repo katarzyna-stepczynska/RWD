@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
     <title>Product Landing Page</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="all and (min-width: 900px)" href="style-desktop.css">
+    <link rel="stylesheet" media="all and (max-width: 768px)" href="style-mobile.css">
 </head>
 <body>
     <header id="header">
-        <div class="header-logo">
+        <div id="header-logo">
             <img id="header-img" src="images/apple-logo.svg" alt="red apple simple logo"/>
             <span class="header-text"><h1>Love apples</h1></span>
+            <div class="nav-icon" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </div>
         <nav id="nav-bar">
             <ul>
@@ -37,7 +43,7 @@
             </div>
         </div>
     </section>
-    <section id="features">
+    <!-- <section id="features">
         <div class="container">
             <h2>Different shapes and sizes</h2>
             <h5><strong>Apple</strong> comes in many different unique shapes and sizes. Find the one that fits your personal preferences.</h5>
@@ -104,7 +110,7 @@
     <section id="orchard-of-apples">
         <h2>100% Customer satisfaction</h2>
         <h5>I have big pleasure to meet you. Watch this video to know where we are from.</h5>
-        <iframe id="video" width="640" height="360" src="https://youtube.com/embed/lkzWq2cSPUI" frameborder="0" allowfullscreen>
+        <iframe id="video" width="640" height="480" src="https://youtube.com/embed/lkzWq2cSPUI" frameborder="0" allowfullscreen>
         </iframe>
     </section>
     <section id="buy">
@@ -166,7 +172,12 @@
                 <a href="https://www.freecodecamp.org/kate_step" target="_blank">
                     <span class="icon"><i class="fa fa-free-code-camp"></i></span></a>
             </div>
-        </footer>
+        </footer> -->
     </div>
 </body>
+<script type="text/javascript">
+   function myFunction(x) {
+        x.classList.toggle("open");
+    }
+</script>
 </html>
