@@ -12,11 +12,8 @@ header {
     width: 100%;
   position: fixed;
   top: 0;
-  margin-top: 20px;
+  margin-top: 10px;
   height: 50px;
-  /* display: flex;
-  justify-content: space-around;
-  align-items: center; */
   background-color: transparent; 
 }
 #header-logo {
@@ -88,7 +85,7 @@ h2 {
     font-family: 'Open Sans', 'Euphemia', sans-serif;
     font-size: 30px;
     margin: 0 10px;
-    padding: 100px 0 0 0;
+    padding: 80px 0 0 0;
     font-weight: 100;
 }
 h5 {
@@ -141,16 +138,18 @@ h5 {
   background-repeat: no-repeat;
   text-align: center;
   color: #554F49;
+  padding-bottom: 60px;
 }
 #features .grid {
   margin: 20px;
   min-width: 400px; 
 }
 .desc {
-  margin: 10px;
+  margin: 10px 40px;
 }
 p {
   line-height: 1.25em;
+  font-size: 0.8em;
 }
 #nutrition {
   width: 100%;
@@ -181,7 +180,7 @@ p {
     padding: 0;
 }
 .nutrition-img {
-  margin: 20px 0 40px 0;
+  margin: 20px 0 90px 0;
   height: 200px;
 }
 #orchard-of-apples {
@@ -192,20 +191,18 @@ p {
 }
 #video {
   margin: 0 auto;
-  padding: 20px 0 40px 0;
+  padding: 20px 0 90px 0;
 }
 #buy {
   width: 100%;
   background-color: #ededed;
   text-align: center;
   color: #554F49;
-}
-.grids-row {
-  margin: 0;
-  padding: 0;
+  padding-bottom: 90px;
 }
 #lite, #pro, #team {
-  margin: 20px;
+  margin: 0 auto;
+  margin-top: 25px;
   width: 300px; 
   border: 1px solid #554F49;
 }
@@ -216,6 +213,7 @@ p {
 }
 #buy ol li {
   margin: 10px;
+  font-size: 0.8em;
 }
 #buy ol li:before {
     content: "•";
@@ -228,9 +226,9 @@ p {
 }
 .btn {
   background: transparent;
-  border: 1px solid #8e6f2c;
+  border: 1px solid #554F49;
   border-radius: 50px;
-  color: #8e6f2c;
+  color: #554F49;
   font-family: 'Open Sans', 'Euphemia', sans-serif;
   font-size: 1.2em;
   padding: 7px 14px;
@@ -238,6 +236,22 @@ p {
 }
 .buy-img {
   height: 200px;
+}
+footer {
+  background: #F1F1F1;
+  text-align: center;
+  padding: 30px 0;
+}
+h4 {
+  font-family: 'Open Sans', 'Euphemia', sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 10px;
+  color: #554F49;
+}
+footer a {
+  color: #8e6f2c;
+  text-decoration: underline;
 }
 
 
