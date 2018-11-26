@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product Landing Page</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
-    <link rel="stylesheet" media="all and (min-width: 900px)" href="style-desktop.css">
-    <link rel="stylesheet" media="all and (max-width: 768px)" href="style-mobile.css">
+    <!-- <link rel="stylesheet" media="all and (min-width: 900px)" href="style-desktop.css">
+    <link rel="stylesheet" media="all and (max-width: 768px)" href="style-mobile.css"> -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
 </head>
 <body>
     <header id="header">
@@ -30,143 +31,155 @@
         </nav>
     </header>
     <section id="home">
-        <h2><strong>Sweet, Nutritious and Delicious</strong></h2>
-        <h5>The key to hapiness is hidden in the <strong>Apple</strong>.</h5>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <label for="email"><h5>Want to meet Love Apples?</h5></label>
-            <input name="email" id="email" type="email" placeholder="Write your email address" required />
-            <input id="submit" type="submit" value="Pick one of them!" />
-        </form>
-        <div>
-            <img class="home-img" src="images/apples-home.png" alt=" two reds apples"/>
+        <div class="container">
+            <h2><strong>Sweet, Nutritious and Delicious</strong></h2>
+            <h5>The key to hapiness is hidden in the <strong>Apple</strong>.</h5>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <label for="email"><h5>Want to meet Love Apples?</h5></label>
+                <input name="email" id="email" type="email" placeholder="Write your email address" required />
+                <input id="submit" type="submit" value="Pick one of them!" />
+            </form>
+            <div>
+                <img class="home-img" src="images/apples-home.png" alt=" two reds apples"/>
+            </div>
         </div>
     </section>
     <section id="features">
-        <h2>Different shapes and sizes</h2>
-        <h5><strong>Apple</strong> comes in many different unique shapes and sizes. Find the one that fits your personal preferences.</h5>
-        <div class="grids-row">
-            <div class="grid">
-                <div class="icon">
-                    <span><img src="images/apple-feature-1.svg"></span>
-                </div>
-                <div class="desc">
-                    <h4>Beautiful round shapes</h4>
-                    <p>Apples are a shape similar to a sphere, with a depression on the top, from which protrudes a petiole, on which an apple grows on a tree</p>
-                </div>
-            </div>
-            <div class="grid">
-                <div class="icon">
-                    <span><img src="images/apple-feature-2.svg"></span>
-                </div>
-                <div class="desc">
-                    <h4>Different colours</h4>
-                    <p>The color of apple peel occurs in shades of green, and after maturing also yellow or red, often mixed. The pulp takes on a very light - near-white or pale yellow color, while the layers lying close to the skin may be slightly green, pink, sometimes with visible "veins" - depending on its color. The apples may be peeled, and then the bruise becomes soft and brown.</p>
-                </div>
-            </div>
-            <div class="grid">
-                <div class="icon">
-                    <span><img src="images/apple-feature-3.svg"></span>
-                </div>
-                <div class="desc">
-                    <h4>Juicy flesh</h4>
-                    <p>The taste of ripe apple apples is sweet and sour. The apple flesh is stiff, crunchy and full of transparent juice. After long storage the apple becomes soft and wrinkled, but still edible. After slicing or peeling with access to oxygen, the apple pulp begins to oxidize on the surface, which turns brown.</p>
-                </div>
-            </div> 
-        </div> 
-    </section>
-    <section id="nutrition">
-        <h2>Is <strong>Apple</strong> healthy? Yes it is!</h2>
-        <h5>The majority of vitamines in apples are complex vitamines, your body's main energy source.</h5>
-        <div class="nutrition-desc">
-            <div class="grids-column">
+        <div class="container">
+           <h2>Different shapes and sizes</h2>
+            <h5><strong>Apple</strong> comes in many different unique shapes and sizes. Find the one that fits your personal preferences.</h5>
+            <div class="grids-row">
                 <div class="grid">
-                    <h2>52 kcal</h2>
-                    <h5>calories</h5>
+                    <div class="icon">
+                        <span><img src="images/apple-feature-1.svg"></span>
+                    </div>
+                    <div class="desc">
+                        <h4>Beautiful round shapes</h4>
+                        <p>Apples are a shape similar to a sphere, with a depression on the top, from which protrudes a petiole, on which an apple grows on a tree</p>
+                    </div>
                 </div>
                 <div class="grid">
-                    <h2>14 g</h2>
-                    <h5>carbohydrate</h5>
-                </div>
-            </div>
-            <div>
-                <img class="nutrition-img" src="images/apple-nutrition.png" alt="one beautiful red apple with description" />
-            </div>
-            <div class="grids-column">
-                <div class="grid">
-                    <h2>0,3 g</h2>
-                    <h5>protein</h5>
+                    <div class="icon">
+                        <span><img src="images/apple-feature-2.svg"></span>
+                    </div>
+                    <div class="desc">
+                        <h4>Different colours</h4>
+                        <p>The color of apple peel occurs in shades of green, and after maturing also yellow or red, often mixed. The pulp takes on a very light - near-white or pale yellow color, while the layers lying close to the skin may be slightly green, pink, sometimes with visible "veins" - depending on its color. The apples may be peeled, and then the bruise becomes soft and brown.</p>
+                    </div>
                 </div>
                 <div class="grid">
-                    <h2>0,2 g</h2>
-                    <h5>fat</h5>
+                    <div class="icon">
+                        <span><img src="images/apple-feature-3.svg"></span>
+                    </div>
+                    <div class="desc">
+                        <h4>Juicy flesh</h4>
+                        <p>The taste of ripe apple apples is sweet and sour. The apple flesh is stiff, crunchy and full of transparent juice. After long storage the apple becomes soft and wrinkled, but still edible. After slicing or peeling with access to oxygen, the apple pulp begins to oxidize on the surface, which turns brown.</p>
+                    </div>
                 </div> 
-            </div>
+            </div>  
         </div>  
     </section>
+    <section id="nutrition">
+        <div class="container">
+            <h2>Is <strong>Apple</strong> healthy? Yes it is!</h2>
+            <h5>The majority of vitamines in apples are complex vitamines, your body's main energy source.</h5>
+            <div class="nutrition-desc">
+                <div class="grids-column">
+                    <div class="grid">
+                        <h2>52 kcal</h2>
+                        <h5>calories</h5>
+                    </div>
+                    <div class="grid">
+                        <h2>14 g</h2>
+                        <h5>carbohydrate</h5>
+                    </div>
+                </div>
+                <div>
+                    <img class="nutrition-img" src="images/apple-nutrition.png" alt="one beautiful red apple with description" />
+                </div>
+                <div class="grids-column">
+                    <div class="grid">
+                        <h2>0,3 g</h2>
+                        <h5>protein</h5>
+                    </div>
+                    <div class="grid">
+                        <h2>0,2 g</h2>
+                        <h5>fat</h5>
+                    </div> 
+                </div>
+            </div>  
+        </div>
+    </section>
     <section id="orchard-of-apples">
-        <h2>100% Customer satisfaction</h2>
-        <h5>I have big pleasure to meet you. Watch this video to know where we are from.</h5>
-        <iframe id="video" width="320" height="240" src="https://youtube.com/embed/lkzWq2cSPUI" frameborder="0" allowfullscreen>
-        </iframe>
+        <div class="container">
+            <h2>100% Customer satisfaction</h2>
+            <h5>I have big pleasure to meet you. Watch this video to know where we are from.</h5>
+            <iframe id="video" width="320" height="240" src="https://youtube.com/embed/lkzWq2cSPUI" frameborder="0" allowfullscreen>
+            </iframe>   
+        </div> 
     </section>
     <section id="buy">
-        <h2>Order one or more today!</h2>
-        <div class="grids-row">
-            <div id="lite">
-                <h5><strong>Apple </strong>Lite</h5>
-                <ol>
-                    <li>Small and compact</li>
-                    <li>Highly portable</li>
-                    <li>Unapologetically delicious</li>
-                </ol>
-                <div>
-                    <img class="buy-img" src="images/apple-lite.png" alt="one small red apple" />
+        <div class="container">
+            <h2>Order one or more today!</h2>
+            <div class="grids-row">
+                <div id="lite">
+                    <h5><strong>Apple </strong>Lite</h5>
+                    <ol>
+                        <li>Small and compact</li>
+                        <li>Highly portable</li>
+                        <li>Unapologetically delicious</li>
+                    </ol>
+                    <div>
+                        <img class="buy-img" src="images/apple-lite.png" alt="one small red apple" />
+                    </div>
+                    <h2>$0.99</h2>
+                    <button class="btn">Order</button>
                 </div>
-                <h2>$0.99</h2>
-                <button class="btn">Order</button>
-            </div>
-            <div id="pro">
-                <h5><strong>Apple </strong>Pro</h5>
-                <ol>
-                    <li>Small and compact</li>
-                    <li>Highly portable</li>
-                    <li>Unapologetically delicious</li>
-                    <li>More nutrition for healthy</li>
-                    <li>Easily sliceable</li>
-                </ol>
-                <div>
-                    <img class="buy-img" src="images/apple-pro.png" alt="one big red apple" />
+                <div id="pro">
+                    <h5><strong>Apple </strong>Pro</h5>
+                    <ol>
+                        <li>Small and compact</li>
+                        <li>Highly portable</li>
+                        <li>Unapologetically delicious</li>
+                        <li>More nutrition for healthy</li>
+                        <li>Easily sliceable</li>
+                    </ol>
+                    <div>
+                        <img class="buy-img" src="images/apple-pro.png" alt="one big red apple" />
+                    </div>
+                    <h2>$1.99</h2>
+                    <button class="btn">Order</button>
                 </div>
-                <h2>$1.99</h2>
-                <button class="btn">Order</button>
-            </div>
-            <div id="team">
-                <h5><strong>Apple </strong>Team</h5>
-                <ol>
-                    <li>Ideal for bigger groups</li>
-                    <li>Unapologetically delicious</li>
-                    <li>More nutrition for healthy</li>
-                    <li>Easily sliceable</li>
-                </ol>
-                <div>
-                    <img class="buy-img" src="images/apple-team.png" alt="a few of red apples" />
+                <div id="team">
+                    <h5><strong>Apple </strong>Team</h5>
+                    <ol>
+                        <li>Ideal for bigger groups</li>
+                        <li>Unapologetically delicious</li>
+                        <li>More nutrition for healthy</li>
+                        <li>Easily sliceable</li>
+                    </ol>
+                    <div>
+                        <img class="buy-img" src="images/apple-team.png" alt="a few of red apples" />
+                    </div>
+                    <h2>$5.99</h2>
+                    <button class="btn">Order</button>
                 </div>
-                <h2>$5.99</h2>
-                <button class="btn">Order</button>
             </div>
         </div>
     </section>
     <footer>
-        <h4>Designed and built by Katarzyna Stepczynska - 2018 for FreeCodeCamp / Product Landing Page</h4>
-        <h4>Inspiration taken from <a href="https://dribbble.com/shots/2042501-Potato-landing-page">dribble's page</a> made by <a href="https://dribbble.com/eldinheric">Eldin Herić</a></h4>
-        <h4>References from: <a href="https://pl.wikipedia.org/wiki/Jab%C5%82ko" target="_blank">Wikipedia</a> and translate into english.</h4>
-        <div class="contact">
-            <a href="https://github.com/katarzyna-stepczynska" target="_blank">
-                <span class="icon"><i class="fa fa-github"></i></span></a>
-            <a href="https://codepen.io/katarzyna-stepczynska/" target="_blank">
-                <span class="icon"><i class="fa fa-codepen"></i></span></a>
-            <a href="https://www.freecodecamp.org/kate_step" target="_blank">
-                <span class="icon"><i class="fa fa-free-code-camp"></i></span></a>
+        <div class="container">
+            <h4>Designed and built by Katarzyna Stepczynska - 2018 for FreeCodeCamp / Product Landing Page</h4>
+            <h4>Inspiration taken from <a href="https://dribbble.com/shots/2042501-Potato-landing-page">dribble's page</a> made by <a href="https://dribbble.com/eldinheric">Eldin Herić</a></h4>
+            <h4>References from: <a href="https://pl.wikipedia.org/wiki/Jab%C5%82ko" target="_blank">Wikipedia</a> and translate into english.</h4>
+            <div class="contact">
+                <a href="https://github.com/katarzyna-stepczynska" target="_blank">
+                    <span class="icon"><i class="fa fa-github"></i></span></a>
+                <a href="https://codepen.io/katarzyna-stepczynska/" target="_blank">
+                    <span class="icon"><i class="fa fa-codepen"></i></span></a>
+                <a href="https://www.freecodecamp.org/kate_step" target="_blank">
+                    <span class="icon"><i class="fa fa-free-code-camp"></i></span></a>
+            </div>
         </div>
     </footer>
 </body>

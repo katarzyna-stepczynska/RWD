@@ -4,63 +4,120 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+h1 {
+    margin: 0;
+    padding: 0;
+}
 header {
-  width: 100%;
+    width: 100%;
   position: fixed;
   top: 0;
-  height: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: transparent;
+  margin-top: 10px;
+  height: 50px;
+  background-color: transparent; 
 }
-#header-img{
-    height: 8vh;
+#header-logo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+#header-img {
+    height: 50px;
+    margin-left: 15px;
 }
 .header-text {
   font-family: 'Pacifico', 'Calibri', cursive;
   float: left;
   color: #F1F1F1;
+  margin-left: 15px;
+}
+.nav-icon {
+    display: block;
+    cursor: pointer;
+    float: right;
+    margin-right: 15px;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #F1F1F1;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.open .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.open .bar2 {
+    opacity: 0;
+}
+.open .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 #nav-bar {
+    width: 100%;
   text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  background: transparent;
+  display: none;
 }
-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.open #nav-bar {
+    display: block;
+}
+#nav-bar ul {
+    width: 100%;
+    background: #554F49;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 20px 0;
 }
 #nav-bar ul li {
-  margin: 0 20px;
+    list-style: none;
+    text-align: center;
+    margin: 20px;
+    border-bottom: 1px solid #F1F1F1;
 }
-a {
+#nav-bar ul li a {
   color: #F1F1F1;
   text-decoration: none;
+  margin-bottom: 15px;
+}
+#nav-bar ul li a:hover {
+    color: #554F49;
 }
 h2 {
     font-family: 'Open Sans', 'Euphemia', sans-serif;
-    font-size: 40px;
-    margin: 0;
-    padding: 120px 0 0 0;
+    font-size: 30px;
+    margin: 0 10px;
+    padding: 80px 0 0 0;
     font-weight: 100;
 }
 h5 {
     font-family: 'Open Sans', 'Euphemia', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 100;
-    margin: 20px 0;
+    margin: 20px 10px;
     padding: 0;
+}
+#home {
+    width: 100%;
+  background-image: radial-gradient(rgba(174,149,127,0.5), rgba(174,149,127,1));
+  text-align: center;
+  color: #F1F1F1;
+}
+#email {
+  height: 40px;
+  width: 80%;
+  padding: 0 10px;
+  margin: 5px 15px;
+  font-size: 1em;
+  border: 1px #F1F1F1 solid;
+  background: transparent;
+  color: #F1F1F1;
+}
+#email:focus {
+  outline: none;
+  color: #F1F1F1;
 }
 #submit {
   padding: 0 10px;
-  margin: 5px 0 5px 15px;
+  margin: 10px 15px;
   height: 40px;
   font-size: 1em;
   font-weight: 900;
@@ -70,48 +127,37 @@ h5 {
   cursor: pointer;
   color: #f1f1f1;
 }
-#email {
-  height: 40px;
-  width: 65%;
-  padding: 0 10px;
-  margin: 5px 0;
-  font-size: 1em;
-  border: 1px #F1F1F1 solid;
-  background: transparent;
-  color: #F1F1F1;
-}
-#email:focus {
-  outline: none;
-}
-.container {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-}
-#home {
-  width: 100%;
-  background-image: radial-gradient(rgba(174,149,127,0.5), rgba(174,149,127,1));
-  height: 100vh;
-  text-align: center;
-}
-#home h2, #home h5, #nutrition h2, #nutrition h5 {
-  color: #F1F1F1;
-}
-#features h2, #features h5, #buy h2, #buy h5 {
-  color: #554F49;
-}
 .home-img {
-  height: 350px;
+  height: 200px;
+  margin-bottom: 40px;
 }
 #features {
   width: 100%;
   background-color: #f1f1f1;
   background-image: url("images/background-feature.png");
   background-repeat: no-repeat;
-  height: 100vh;
   text-align: center;
+  color: #554F49;
+  padding-bottom: 60px;
 }
-.grids-row {
+#features .grid {
+  margin: 20px;
+  min-width: 400px; 
+}
+.desc {
+  margin: 10px 40px;
+}
+p {
+  line-height: 1.25em;
+  font-size: 0.8em;
+}
+#nutrition {
+  width: 100%;
+  background-image: radial-gradient(rgba(107,141,91,0.75), rgba(107,141,91,1));
+  text-align: center;
+  color: #F1F1F1;
+}
+.nutrition-desc {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -125,66 +171,40 @@ h5 {
   margin: 0;
   padding: 0;
 }
-.grid {
-  margin: 20px;
-  max-width: 400px; 
-}
-.icon {
-  text-align: center;
-  margin-top: 10px;
-}
-.desc {
-  color: #554F49;
+#nutrition .grid {
   margin: 10px;
+  min-width: 30px; 
 }
-p {
-  line-height: 1.25em;
-}
-#nutrition {
-  width: 100%;
-  background-image: radial-gradient(rgba(107,141,91,0.75), rgba(107,141,91,1));
-  height: 100vh;
-  text-align: center;
-}
-.nutrition-desc {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
+#nutrition .nutrition-desc .grids-column .grid h2 {
+    margin: 0;
+    padding: 0;
 }
 .nutrition-img {
-  margin-top:20px;
-  height: 350px;
-}
-#nutrition .nutrition-desc .grids-column .grid h2, #nutrition .nutrition-desc .grids-column .grid h5, #buy .grids-row h2, #buy o.grids-rowl h5 {
-  padding: 10px 0 0 0;
-  margin: 0;
+  margin: 20px 0 90px 0;
+  height: 200px;
 }
 #orchard-of-apples {
   width: 100%;
   background-image: radial-gradient(rgba(230,213,169,0.75), rgba(230,213,169,1));
-  height: 100vh;
   text-align: center;
+  color: #8e6f2c;
 }
 #video {
   margin: 0 auto;
-  padding-top: 20px;
-}
-#orchard-of-apples h2, #orchard-of-apples h5 {
-  color: #8e6f2c;
+  padding: 20px 0 90px 0;
 }
 #buy {
   width: 100%;
   background-color: #ededed;
-  height: 130vh;
   text-align: center;
+  color: #554F49;
+  padding-bottom: 90px;
 }
 #lite, #pro, #team {
-  margin: 20px;
+  margin: 0 auto;
+  margin-top: 25px;
   width: 300px; 
   border: 1px solid #554F49;
-  color: #554F49;
 }
 #buy ol {
   margin: 20px;
@@ -193,24 +213,29 @@ p {
 }
 #buy ol li {
   margin: 10px;
+  font-size: 0.8em;
 }
 #buy ol li:before {
     content: "•";
     padding-right: 8px;
     color: #554F49;
 }
+#buy #lite h2, #buy #pro h2, #buy #team h2 {
+    padding: 0;
+    margin: 0;
+}
 .btn {
   background: transparent;
-  border: 1px solid #8e6f2c;
+  border: 1px solid #554F49;
   border-radius: 50px;
-  color: #8e6f2c;
+  color: #554F49;
   font-family: 'Open Sans', 'Euphemia', sans-serif;
   font-size: 1.2em;
   padding: 7px 14px;
   margin: 15px 0 25px 0;
 }
 .buy-img {
-  height: 275px;
+  height: 200px;
 }
 footer {
   background: #F1F1F1;
@@ -227,4 +252,124 @@ h4 {
 footer a {
   color: #8e6f2c;
   text-decoration: underline;
+}
+@media all and (min-width: 1200px) {
+    header {
+      height: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .nav-icon {
+      display: none;
+    }
+    #nav-bar {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    #nav-bar ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: none;
+    }
+    #nav-bar ul li {
+      margin: 0 20px;
+      display: inline-block;
+      border: none;
+    }
+    h2 {
+      font-size: 40px;
+      margin: 0;
+      padding: 120px 0 0 0;
+    }
+      h5 {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    .container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #home {
+    height: 100vh;
+  }
+  #email {
+    width: 65%;
+    margin: 5px 0;
+  }
+  #submit {
+    margin: 5px 0 5px 15px;
+  }
+  .home-img {
+    height: 350px;
+    margin: 0;
+  }
+  #features {
+    height: 100vh;
+    padding: 0;
+  }
+  .grids-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .grids-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .grid {
+    margin: 20px;
+    max-width: 400px; 
+  }
+  .icon {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .desc {
+    color: #554F49;
+    margin: 10px;
+  }
+  p {
+    font-size: 1em;
+  }
+  #nutrition {
+    height: 100vh;
+  }
+  #nutrition .nutrition-desc .grids-column .grid h2, #nutrition .nutrition-desc .grids-column .grid h5 {
+    padding: 10px 0 0 0;
+    margin: 0;
+  }
+  .nutrition-img {
+  margin: 20px 0 0 0;
+  height: 350px;
+  }
+  #orchard-of-apples {
+    height: 100vh;
+  }
+  #buy {
+    height: 130vh;
+    padding: 0;
+  }
+  #lite, #pro, #team {
+    margin: 20px;
+  }
+  #buy ol li {
+    font-size: 1em;
+  }
+  .buy-img {
+    height: 275px;
+  }
 }
