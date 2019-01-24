@@ -13,13 +13,144 @@
     <main id="main-doc">
         <section class="main-section" id="what_is_ES6">
             <header>What is ES6?</header>
-            <p>ECMAScript 2015, also known as ES6, is a fundamental version of the ECMAScript standard. Published 4 years after the latest standard revision, ECMAScript 5.1, it also marked the switch from edition number to year number.So it should not be named ES6 (although everyone calls it as such) but ES2015 instead.</p>
-        </section>
-        <section class="main-section" id="difference_in_scoping">
-            <header>Difference in scoping</header>
+            <article>
+                <p>ECMAScript 2015, also known as ES6, is a fundamental version of the ECMAScript standard. Published 4 years after the latest standard revision, ECMAScript 5.1, it also marked the switch from edition number to year number.So it should not be named ES6 (although everyone calls it as such) but ES2015 instead.</p>
+                <p>Since this long time passed between ES5.1 and ES6, the release is full of important new features and major changes in suggested best practices in developing JavaScript programs.</p>
+                <p>The most important changes in ES2015 include:</p>
+                <li>Arrow functions</li>
+                <li>Scopes</li>
+                <li>Promises</li>
+                <li>Generators</li>
+                <li>let and const</li>
+                <li>Classes</li>
+                <li>Modules</li>
+                <li>Multiline strings</li>
+                <li>Template literals</li>
+                <li>Default parameters</li>
+                <li>The spread operator|</li>
+                <li>Destructuring assignments</li>
+                <li>Enhanced object literals</li>
+                <li>The for..of loop</li>
+                <li>Map and Set</li>
+                <p>I’ll cover each of them in a dedicated section here in this guide. So let’s get started.</p>
+            </article>
         </section>
         <section class="main-section" id="arrow_function">
             <header>Arrow function</header>
+            <article>
+                <p>Arrow functions have changed how most JavaScript code looks (and works). Visually, it’s a simple and welcome change, from:</p>
+                <code>
+                    const foo = function foo() {
+                        //...
+                    }
+                </code>
+                <p>to:</p>
+                <code>
+                    const foo = () => {
+                    //...
+                    }
+                </code>
+                <p>And if the function body is a one-liner, just:</p>
+                <code>
+                    const foo = () => doSomething()
+                </code>
+                <p>Also, if you have a single parameter, you could write:</p>
+                <code>
+                    const foo = param => doSomething(param)
+                </code>
+                <p>This is not a breaking change, as regular functions will continue to work just as before.</p>
+                <p>The <code>this</code> scope with arrow functions is inherited from the context.</p>
+                <p>With regular functions, <code>this</code> always refers to the nearest function, while with arrow functions this problem is removed, and you won't need to write <code>var that = this</code> ever again.</p>
+                <p>More expressive closure syntax.</p>
+                <p>Expression bodies</p>
+                <code>
+                    odds = evens.map(v => v + 1) 
+                    pairs = evens.map(v => ({ even: v, odd: v + 1 })) 
+                    nums = evens.map((v, i) => v + i)
+                </code>
+                <p>Instead:</p>
+                <code>
+                    odds = evens.map(function (v) { return v + 1; }); 
+                    pairs = evens.map(function (v) { return { even: v, odd: v + 1 }; });
+                    nums = evens.map(function (v, i) { return v + i; });
+                </code>
+                <p>Statement bodies</p>
+                <code>
+                    nums.forEach(v => { 
+                        if (v % 5 === 0)
+                        fives.push(v) 
+                    })
+                </code>
+                <p>Instead:</p>
+                <code>
+                    nums.forEach(function (v) {
+                        if (v % 5 === 0)
+                        fives.push(v);
+                    });
+                </code>
+                <p>Lexical this. More intuitive handling of current object context.</p>
+                <code>
+                    this.nums.forEach((v) => {
+                        if (v % 5 === 0)
+                        this.fives.push(v)
+                    })
+                </code>
+                <p>Instead:</p>
+                <code>
+                    // variant 1
+                    var self = this;
+                    this.nums.forEach(function (v) {
+                        if (v % 5 === 0)
+                            self.fives.push(v);
+                    });
+                    
+                    // variant 2
+                    this.nums.forEach(function (v) {
+                        if (v % 5 === 0)
+                            this.fives.push(v);
+                    }, this);
+                    
+                    // variant 3 (since ECMAScript 5.1 only)
+                    this.nums.forEach(function (v) {
+                        if (v % 5 === 0)
+                        this.fives.push(v);
+                    }.bind(this));
+                </code>
+                
+            </article>
+        </section>
+        <section class="main-section" id="promises">
+            <header>Promises</header>
+            <article>
+                <p>Promises allow us to eliminate the famous “callback hell”, although they introduce a bit more complexity (which has been solved in ES2017 with <code>async</code>, a higher level construct).</p>
+                <p>Promises have been used by JavaScript developers well before ES2015, with many different library implementations (for example, jQuery, q, deferred.js, vow…). The standard created a common ground across the differences.</p>
+                <p>By using promises, you can rewrite this code:</p>
+                <code>
+                    setTimeout(function() {
+                        console.log('I promised to run after 1s')
+                        setTimeout(function() {
+                            console.log('I promised to run after 2s')
+                        }, 1000)
+                    }, 1000)
+                </code>
+                <p>as</p>
+                <code>
+                    const wait = () => new Promise((resolve, reject) => {
+                        setTimeout(resolve, 1000)
+                    })
+
+                    wait().then(() => {
+                        console.log('I promised to run after 1s')
+                        return wait()
+                    })
+                    .then(() => console.log('I promised to run after 2s'))
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="difference_in_scoping">
+            <header>Difference in scoping</header>
+            <article>
+            </article>
         </section>
         <section class="main-section" id="extended_parameter_handling">
             <header>Extended Parameter Handling</header>
@@ -53,9 +184,6 @@
         </section>
         <section class="main-section" id="new_buildin_methods">
             <header>New Built-In Methods</header>
-        </section>
-        <section class="main-section" id="promises">
-            <header>Promises</header>
         </section>
         <section class="main-section" id="meta_programming">
             <header>Meta Programming</header>
