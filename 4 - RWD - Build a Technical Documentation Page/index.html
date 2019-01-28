@@ -145,6 +145,32 @@
                     })
                     .then(() => console.log('I promised to run after 2s'))
                 </code>
+                <p>First class representation of a value that may be made asynchronously and be available in the future. Correct promise usage:</p>
+                <code>
+                    function msgAfterTimeout (msg, who, timeout) { 
+                        return new Promise((resolve, reject) => {
+                             setTimeout(() => resolve(`${msg} Hello ${who}!`), timeout)
+                        })
+                    }
+                    msgAfterTimeout("", "Foo", 100).then((msg) => 
+                        msgAfterTimeout(msg, "Bar", 200)
+                    ).then((msg) => {
+                        console.log(`done after 300ms:${msg}`
+                    })
+                </code>
+                <p>Incorrect promise usage is below:</p>
+                <code>
+                    function msgAfterTimeout (msg, who, timeout, onDone) {
+                        setTimeout(function () {
+                            onDone(msg + " Hello " + who + "!");
+                        }, timeout);
+                    }
+                    msgAfterTimeout("", "Foo", 100, function (msg) {
+                        msgAfterTimeout(msg, "Bar", 200, function (msg) {
+                            console.log("done after 300ms:" + msg);
+                        });
+                    });
+                </code>
             </article>
         </section>
         <section class="main-section" id="difference_in_scoping">
