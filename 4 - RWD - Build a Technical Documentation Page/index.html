@@ -173,9 +173,51 @@
                 </code>
             </article>
         </section>
-        <section class="main-section" id="difference_in_scoping">
-            <header>Difference in scoping</header>
+        <section class="main-section" id="generators">
+            <header>Generators</header>
             <article>
+                <p>Generators are a special kind of function with the ability to pause themselves, and resume later, allowing other code to run in the meantime. </p>
+                <p>The code decides that it has to wait, so it lets other code “in the queue” run,and keeps the right to resume its operations “when the thing it’s waiting for” is done. </p>
+                <p>All this is done with a single, simple keyword: <code>yield</code>. When a generator contains that keyword, the execution is halted.</p>
+                <p>A generator can contain many <code>yield</code> keywords, thus halting itself multiple times, and it's identified by the <code>*function</code> keyword, which is not to be confused with the pointer dereference operator used in lower level programming languages such as C, C++ or Go.</p>
+                <p>Generators enable whole new paradigms of programming in JavaScript, allowing:</p>
+                <li>2-way communication while a generator is running</li>
+                <li>long-lived while loops which do not freeze your program</li>
+                <p>Here is an example of a generator which explains how it all works.</p>
+                <code>
+                    function *calculator(input) {
+                        var doubleThat = 2 * (yield (input / 2))
+                        var another = yield (doubleThat)
+                        return (input * doubleThat * another)
+                    }
+                </code>
+                <p>We initialize it with</p>
+                <code>
+                    const calc = calculator(10)
+                </code>
+                <p>Then we start the iterator on our generator:</p>
+                <code>
+                    calc.next()
+                </code>
+                <p>This first iteration starts the iterator. The code returns <code>this</code> object:</p>
+                <code>
+                    {
+                        done: false
+                        value: 5
+                    }
+                </code>
+                <p>What happens is: the code runs the function, with <code>input = 10as</code> it was passed in the generator constructor. It runs until it reaches the <code>yield</code>, and returns the content of <code>yield</code>: <code>input / 2 = 5</code>. So we get a value of 5, and the indication that the iteration is not done (the function is just paused).</p>
+                <p>In the second iteration we pass the value <code>7</code>:</p>
+                <code>
+                    calc.next(7)
+                </code>
+                <p>and what we get back is:</p>
+                <code>
+                    {
+                        done: false
+                        value: 14
+                    }
+                </code>
             </article>
         </section>
         <section class="main-section" id="extended_parameter_handling">
