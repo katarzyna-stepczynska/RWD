@@ -366,7 +366,28 @@
         <section class="main-section" id="let_and_const">
             <header>let and const</header>
             <article>
-                <p>var is traditionally function scoped.</p>
+                <p><code>var</code> is traditionally function scoped.</p>
+                <p><code>let</code> is a new variable declaration which is block scoped.</p>
+                <p>This means that declaring <code>let</code> variables in a for loop, inside an if or in a plain block is not going to let that variable "escape" the block, while <code>vars</code> are hoisted up to the function definition.</p>
+                <p><code>const</code> is just like <code>let</code>, but immutable.</p>
+                <p>In JavaScript moving forward, you’ll see little to no <code>var</code> declarations any more, just <code>let</code> and <code>const</code>.</p>
+                <p><code>const</code> in particular, maybe surprisingly, is very widely used nowadays with immutability being very popular.</p>
+                <p>Constants - Support for constants (also known as "immutable variables"), i.e., variables which cannot be re-assigned new content. Notice: this only makes the variable itself immutable, not its assigned content (for instance, in case the content is an object, this means the object itself can still be altered).</p>
+                <code>
+                    const PI = 3.141593 PI > 3.0
+                </code>
+                <p>Instead:</p>
+                <code>
+                    // only in ES5 through the help of object properties
+                    // and only in global context and not in a block scope
+                    Object.defineProperty(typeof global === "object" ? global : window, "PI", {
+                        value: 3.141593,
+                        enumerable: true,
+                        writable: false,
+                        configurable: false
+                    })
+                    PI > 3.0;
+                </code>
             </article>
         </section>
         <section class="main-section" id="template_literals">
