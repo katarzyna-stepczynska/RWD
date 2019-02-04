@@ -218,6 +218,150 @@
                         value: 14
                     }
                 </code>
+                <p><code>7</code> was placed as the value of <code>doubleThat</code>.</p>
+                <p>Important: you might think that <code>input / 2</code> is the argument, but that's just the return value of the first iteration. We now skip that, and use the new input value, <code>7</code>, and multiply it by 2.</p>
+                <p>We then reach the second yield, and that returns <code>doubleThat</code>, so the returned value is <code>14</code>.</p>
+                <p>In the next, and last, iteration, we pass in 100</p>
+                <code>
+                    calc.next(100)
+                </code>
+                <p>and in return we get:</p>
+                <code>
+                    {
+                        done: true
+                        value: 14000
+                    }
+                </code>
+                <p>As the iteration is done (no more <code>yield</code> keywords found), we just return <code>(input * doubleThat * another)</code> which amounts to <code>10 * 14 * 100</code>.</p>
+                <p>Generator Function, Iterator Protocol - Support for generators, a special case of Iterators containing a generator function, where the control flow can be paused and resumed, in order to produce sequence of values (either finite or infinite).</p>
+                <code>
+                    let fibonacci = {
+                        *[Symbol.iterator]() {
+                            let pre = 0, cur = 1
+                            for (;;) {
+                                [ pre, cur ] = [ cur, pre + cur ]
+                                yield cur
+                            }
+                        } 
+                    } for (let n of fibonacci) {
+                        if (n > 1000)
+                         break
+                        console.log(n)
+                    }
+                </code>
+                <p>Nothing:</p>
+                <code>
+                    var fibonacci = {
+                        next: (function () {
+                            var pre = 0, cur = 1;
+                            return function () {
+                                tmp = pre;
+                                pre = cur;
+                                cur += tmp;
+                                return cur;
+                            };
+                        })()
+                    };
+                    
+                    var n;
+                    for (;;) {
+                        n = fibonacci.next();
+                        if (n > 1000)
+                        break;
+                        console.log(n);
+                    }
+                </code>
+                <p>Generator Function, Direct Use - Support for generator functions, a special variant of functions where the control flow can be paused and resumed, in order to produce sequence of values (either finite or infinite).</p>
+                <code>
+                    function* range (start, end, step) {
+                        while (start < end) {
+                            yield start
+                            start += step
+                        }
+                    }
+                    
+                    for (let i of range(0, 10, 2)) {
+                        console.log(i) // 0, 2, 4, 6, 8
+                    }
+                </code>
+                <p>Instead:</p>
+                <code>
+                    function range (start, end, step) {
+                    var list = [];
+                    while (start < end) {
+                        list.push(start);
+                        start +=step;
+                    }
+                    return list;
+                }
+
+                var r=range(0, 10, 2);
+                for (var i=0; i < r.length; i++) {
+                    console.log(r[i]); // 0, 2, 4, 6, 8
+                }
+                </code>
+                <p>Generator Matching - Support for generator functions, i.e., functions where the control flow can be paused and resumed, in order to produce and spread sequence of values (either finite or infinite).</p>
+                <code>
+                    let fibonacci = function* (numbers) {
+                        let pre = 0, cur = 1
+                        while (numbers-- > 0) {
+                            [ pre, cur ] = [ cur, pre + cur ]
+                            yield cur
+                        }
+                    }
+                    for (let n of fibonacci(1000))
+                    console.log(n)
+                    
+                    let numbers = [ ...fibonacci(1000) ]
+                    
+                    let [ n1, n2, n3,...others ] = fibonacci(1000)
+                </code>
+                <p>Generator Control-Flow - Support for generators, a special case of Iterators where the control flow can be paused and resumed, in order to support asynchronous programming in the style of "co-routines" in combination with Promises (see below). [Notice: the generic async function usually is provided by a reusable library and given here just for better understanding.]</p>
+                <code>
+                    // generic asynchronous control-flow driver 
+                    function async (proc, ...params) {
+                        let iterator = proc(...params)
+                        return new Promise((resolve, reject) => {
+                            let loop = (value) => {
+                                let result
+                                try { 
+                                    result = iterator.next(value)
+                                }
+                                catch (err) {
+                                    reject(err)
+                                }
+                                if (result.done)
+                                    resolve(result.value) 
+                                else if ( typeof result.value === "object" 
+                                    && typeof result.value.then === "function") 
+                                result.value.then((value) => {
+                                     loop(value)
+                                     }, (err) => {
+                                         reject(err) 
+                                }) 
+                                else loop(result.value) 
+                            } 
+                            loop() 
+                        }) 
+                    }
+
+                    // application-specific asynchronous builder 
+                    function makeAsync (text, after) { 
+                        return new Promise((resolve, reject) => { 
+                            setTimeout(() => resolve(text), after) 
+                        }) 
+                    }
+
+                    // application-specific asynchronous procedure 
+                    async(function* (greeting) { 
+                        let foo = yield makeAsync("foo", 300)
+                        let bar = yield makeAsync("bar", 200) 
+                        let baz = yield makeAsync("baz", 100) 
+                        return `${greeting} ${foo} ${bar} ${baz}` 
+                    }, "Hello").then((msg) => { 
+                        console.log("RESULT:", msg) // "Hello foo bar baz" 
+                    })
+                </code>
             </article>
         </section>
         <section class="main-section" id="extended_parameter_handling">
