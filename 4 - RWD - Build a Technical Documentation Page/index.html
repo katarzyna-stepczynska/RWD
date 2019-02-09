@@ -690,7 +690,23 @@
                     var defRectangle = Rectangle.defaultRectangle();
                     var defCircle = Circle.defaultCircle();
                 </code>
-                <p>Classes - Getters and Setters. Getter/Setter also directly within classes (and not just within object initializers, as it is possible since ECMAScript 5.1).</p>
+                <p>Getters and Setters as classes. A getter for a property can be declared as:</p>
+                <code>
+                    class Person {
+                        get fullName() {
+                        return `${this.firstName} ${this.lastName}`
+                        }
+                    }
+                </code>
+                <p>Setters are written in the same way:</p>
+                <code>
+                    class Person {
+                        set age(years) {
+                            this.theAge = years
+                        }
+                    }
+                </code>
+                <p>Getter/Setter also directly within classes (and not just within object initializers, as it is possible since ECMAScript 5.1).</p>
                 <code>
                     class Rectangle { 
                         constructor (width, height) { 
@@ -741,10 +757,15 @@
                     var r = new Rectangle(50, 20);
                     r.area === 1000;
                 </code>
+                <p>Above in the examples can be seen that classes have a special method called <code>constructor</code> which is called when a class is initialized via <code>new</code>.</p>
+                <p>And the parent class can be referenced using <code>super()</code>.</p>
             </article>
         </section>
-        <section class="main-section" id="enhanced_regular_expression">
-            <header>Enhanced Regular Expression</header>
+        <section class="main-section" id="constructor">
+            <header>Constructor</header>
+            <article>
+                
+            </article>
         </section>
         <section class="main-section" id="destructuring_assignment">
             <header>Destructuring Assignment</header>
